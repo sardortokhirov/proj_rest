@@ -1,15 +1,15 @@
 module.exports = {
   apps: [{
     name: "restarter-api",
-    script: "/root/restarter/venv/bin/uvicorn",
+    script: "/root/Shade/restarter/venv/bin/uvicorn",
     args: "main:app --host 0.0.0.0 --port 8000",
-    cwd: "/root/restarter",
+    cwd: "/root/Shade/restarter",
     autorestart: true,
     watch: false,
     max_memory_restart: "200M",
     env: {
       NODE_ENV: "production",
-      PATH: "/root/restarter/venv/bin:" + process.env.PATH
+      PATH: "/root/Shade/restarter/venv/bin:" + process.env.PATH
     }
   }]
 };
